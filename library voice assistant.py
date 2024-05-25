@@ -27,8 +27,8 @@ ccs=14
 def talk(text):
     engine.say(text)
     engine.runAndWait()
-while(i<10000):
-    h=input('\ntap on the the enter key to continue')
+t=True
+while(t==True):
     def take_command():
         global command
         try:
@@ -129,7 +129,7 @@ while(i<10000):
                 talk(article['title'])
         else:
             talk('i cant recognize your command')
-
-
+        inp=input("Do you Want any other information? (Y/N)").lower
+        if (inp==n):
+            t=False
     run_bot()
-    i=i+1
